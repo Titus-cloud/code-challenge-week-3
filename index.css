@@ -1,40 +1,119 @@
-body{
-  border-color: rgb(242, 230, 191);
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+/* Main Container */
 #main {
   display: flex;
-  justify-content: space-between;  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Film Details Section */
 #film-details {
-  width: 100PX;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
 }
 
-#films {
-  width: 300PX;
-  list-style-type: none;
-  padding: 10px;
+#poster {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.film.item {
-  cursor: pointer;
-  padding: 5px;
-  border-bottom: 1px solid white;
+.more {
+  padding: 20px;
 }
 
-.film.item:hover {
-  background-color: white;
+.more h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.more p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #555;
 }
 
 #buy-ticket {
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #007bff;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6f61;
   color: white;
   border: none;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #buy-ticket:hover {
-  background-color: blue;
+  background-color: #e65b50;
+}
+
+/* Films List */
+#films {
+  list-style: none;
+  max-width: 400px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+#films li {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#films li:last-child {
+  border-bottom: none;
+}
+
+#films li:hover {
+  background-color: #ffefec;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #film-details,
+  #films {
+    max-width: 100%;
+  }
 }

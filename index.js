@@ -1,5 +1,5 @@
     const filmDetailsUrl = 'http://localhost:3001/films/1';
-    const filmsUrl = 'http://localhost:3000/films';
+    const filmsUrl = 'http://localhost:4000/films';
 
   // Fetch and display the movie details
   fetch(filmDetailsUrl)
